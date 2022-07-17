@@ -1,0 +1,18 @@
+diff a/src/apis/BusAxios.js b/src/apis/BusAxios.js	(rejected hunks)
+@@ -1,8 +0,9 @@
+-// import axios from 'axios';
++import axios from 'axios';
+ 
+-// const instance = axios.create({
+-//     timeout : 1000,
+-//     baseURL: 
+-// })
++const Instance = axios.create({
++    baseURL: 'http://apis.data.go.kr',
++    timeout: 1000,
++});
++
++export default Instance;
+ 
+-// 가나다라마바사
+\ No newline at end of file

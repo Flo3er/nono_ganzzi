@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Toastify from '../../common/toast/Toastify';
 import ModalButton from '../../common/modal/ModalButton'
 import './SampleText.css';
