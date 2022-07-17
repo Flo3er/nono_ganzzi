@@ -1,8 +1,9 @@
-// import axios from 'axios';
+import axios from 'axios';
 
-// const instance = axios.create({
-//     timeout : 1000,
-//     baseURL: 
-// })
+const Instance = axios.create({
+    baseURL: 'http://apis.data.go.kr',
+    timeout: 1000,
+});
 
-// 가나다라마바사
+export default Instance;
+
