@@ -3,9 +3,11 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Main from './pages/main/HomePage';
 import Sample from './pages/pageSample/SamplePage';
-import Toolkit from './pages/toolkit/Toolkitpage'
+import Toolkit from './pages/toolkit/Toolkitpage';
+import BusList from './pages/busList/BusListPage';
 
 function App() {
+  
   return (
     <Router>
       <div>
@@ -13,6 +15,7 @@ function App() {
           <Route exact path="/" component={Main} />
           <Route path="/sample" component={Sample} />
           <Route path="/toolkit" component={Toolkit} />
+          <Route path="/buslist" component={BusList} />
         </Switch>
       </div>
     </Router>

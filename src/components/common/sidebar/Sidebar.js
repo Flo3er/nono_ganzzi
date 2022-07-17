@@ -19,7 +19,7 @@ const Sidebar = () => {
                     <ul className='depth1'>
                         <li className='depthLi' onClick = {onClick}><Link to="/sample" className='liA'><AiFillAliwangwang className='emo' /><p className='liP'>메뉴1</p></Link></li>
                         <li className='depthLi'><Link to="/toolkit" className='liA'><AiFillAliwangwang className='emo' /><p className='liP'>메뉴2</p></Link></li>
-                        <li><Link to="" className='liA'><AiFillAliwangwang className='emo' /><p className='liP'>메뉴3</p></Link></li>
+                        <li className='depthLi'><Link to="/buslist" className='liA'><AiFillAliwangwang className='emo' /><p className='liP'>메뉴3</p></Link></li>
                         <li><Link to="" className='liA'><AiFillAliwangwang className='emo' /><p className='liP'>메뉴4</p></Link></li>
                     </ul>
                 </div>
