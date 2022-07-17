@@ -1,0 +1,18 @@
+.apibody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.apibody h2 {padding:30px;}
+table{
+    border:1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: center;
+    width:50%;
+}
+table thead {background-color: #d0d0d0;}
+td, th{border:1px solid gray; padding:5px;}
+/* .show{display: none;} */
+
+.moreList {border:1px solid black;}

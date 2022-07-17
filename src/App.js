@@ -1,22 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import Homepage from './pages/homepage/Homepage';
+import API from './pages/useApi/UseApi';
+import Menu1 from './pages/menu1/Menu1';
 
-import Main from './pages/main/HomePage';
-import Sample from './pages/pageSample/SamplePage';
-import Toolkit from './pages/toolkit/Toolkitpage'
-
-function App() {
-  return (
-    <Router>
-      <div>
-        <Switch>
-          <Route exact path="/" component={Main} />
-          <Route path="/sample" component={Sample} />
-          <Route path="/toolkit" component={Toolkit} />
-        </Switch>
-      </div>
-    </Router>
-  );
-}
+const App = () => {
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<Homepage/>}/>
+                <Route path="/api" element={<API/>}/>
+                <Route path="/menu1" element={<Menu1/>}/>
+            </Routes>
+        </Router>
+    );
+};
 
 export default App;
