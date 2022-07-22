@@ -31,6 +31,21 @@ const Modal = (props) => {
         console.log('클릭')
     }
 
+    function boardForm_check(){
+        var title = document.getElementById('title');
+        var content = document.getElementById('content');
+        if(title.value === ''){
+            alert('제목을 입력하세요.');
+            title.focus();
+            return false;
+        };
+        if (content.value === ''){
+            alert('내용을 입력하세요.');
+            content.focus();
+            return false;
+        }
+    }
+
     return ( 
     <div className={open ? 'openModal modal' : 'modal'}>
         {open ? (
@@ -42,6 +57,7 @@ const Modal = (props) => {
                             placeholder='제목을 입력하세요' 
                             name="title"
                             onChange={onTitleChange} 
+                            id='title'
                         />
                         <button className="close" onClick={close}>
                             <AiOutlineClose />
@@ -53,6 +69,7 @@ const Modal = (props) => {
                             className='bR8' 
                             onChange={onContentChange}
                             name="content"
+                            id='content'
                         />
                     </main>
                     <footer>
@@ -65,10 +82,9 @@ const Modal = (props) => {
                             <p className='mL10 fs14'>주요 공지사항</p>
                         </div>
                         <button 
-                            className="close bR8 back-blue" 
-                            // onClick={()=>{
-                            //     setInfoValue(infoValue.concat({...infoValue}))
-                            // }}
+                            className="close bR8 back-blue"
+                            onClick={boardForm_check}
+                            type='button'
                         >
                             저장하기
                         </button>
