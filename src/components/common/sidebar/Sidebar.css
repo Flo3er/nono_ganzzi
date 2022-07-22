@@ -1,49 +1,111 @@
+/* sidebar 공통.css */
 .sidebar{
     height:100vh;
     position:fixed;
     top:0; left:0;
     z-index:999;
-    width:30%;
-    background-color:yellow;
+    width:260px;
 }
 .head{
     width:100%;
     display:flex;
     flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    padding:10% 0;
+    justify-content:flex-start;
+    align-items: center;
+    height: 100%;
 }
+
+/* 로고부분.css */
 .head > h1{
-    border:1px solid black;
-    font-size:50px;
+    width:100%;
+    margin-top:45px;
+}
+.head > h1 a {display: flex;}
+.head > h1 a img {
+    padding:0 10px 0 20px;
 }
 .head > h1:hover{color:red;}
+.head > h1 .title > h2 {font-size:20px; font-weight: 500;}
+.head > h1 .title > h2:after {
+    display: block;
+    clear: both;
+    border-bottom:2px solid orange;
+    content: '';
+}
+.head > h1 .title > p {font-weight:350;}
 .head > h3{
-    border:1px solid black;
     font-size:30px;
     margin:10% 0;
 }
+
+/* useinfo 부분.css */
+.head > .userinfo {
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top:31px;
+}
+.head > .userinfo a {
+    color:#1F6DE2;
+    background-color: inherit;
+    border:1px solid #1F6DE2;
+    font-size: 10px;
+    padding:5px 14px;
+}
+
+/* 네비.css */
 .mainNav{
     width:100%;
+    margin-top:50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.depth1{border:1px solid red;}
-.depth1 > li{ margin-bottom:2%;}
-.depth1 > li:hover{ text-decoration: underline; }
+.depth1 {
+    height:100vh;
+}
+.depth1 > li{
+    margin-bottom:5px;
+    width:220px;
+}
 .depth1 > li:last-child{margin-bottom:0;}
+.depth1 > li > a > p {padding:10px 0;}
+.depth1 > li:hover > a {
+    transition:all 0.1s;
+    background-color: #F2F9FF;
+    border-radius: 8px;
+}
+.depth1 > li:hover > a > .emo {color:#1F6DE2;}
+/* .depth2작업 */
+.depth1 > li:hover .depth2{ display: block;}
+.depth1 > li .depth2 > li:hover > a { text-decoration: underline;}
+.depth2 {
+    display: none;
+    text-align: center;
+    /* border:1px solid black; */
+}
+.depth2 > li {padding:3px 0;}
+.depth2 > li > a {
+    display:block;
+    padding:2%;
+}
+/* 네비메뉴 공통작업 */
 .liA{
     display:flex;
     align-items:center;
     padding:2%;
 }
 .emo{
-    width:40px;
-    height:40px;
-    margin-right:10px;
-    background-color:green;
+    width:20px;
+    height:20px;
+    margin:0 10px;
 }
 
-@media screen and (max-width:950px){
+
+/* 반응형 화면 구현 */
+/* @media screen and (max-width:950px){
+    .sidebar {width:80px;}
     h1{margin-bottom:20%;}
     h3{display:none;}
     .liA{
@@ -52,4 +114,4 @@
         flex-direction:column;
     }
     .liP{display:none;}
-}
+} */

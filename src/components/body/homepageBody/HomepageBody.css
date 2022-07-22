@@ -1,20 +1,35 @@
 .mainBot{
     width:100%;
-    min-height:70vh;
+    height:calc(100vh - 180px);
+    border:1px solid black;
 }
 .mainList{
     display:flex;
+    flex-direction: column;
     justify-content:space-between;
     flex-wrap:wrap;
-    align-items:center;
-    border:1px solid black;
-    padding:5%;
+    padding:30px;
 }
 .mainList > li{
-    width:30%;
-    height:250px;
-    background-color:white;
-    border:3px solid red;
-    margin-bottom:5%;
-    border-radius:10px;
+    width:320px;
+    height:240px;
+    margin-top:30px;
+}
+.mainList > li:first-child{margin-top:0;}
+.mainList > li > .topmenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:30px;
+}
+.mainList > li > .topmenu h3 {font-size:16px; color:#2E2E2E;}
+.mainList > li > .topmenu > .topmenu_icon > button {font-size: 20px; cursor: pointer;}
+.mainList > li > .infoList {
+    border:1px solid #B0BECC;
+    height:210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7A7A7D;
+    background-color: #F2F9FF;
 }

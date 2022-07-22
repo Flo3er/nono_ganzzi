@@ -1,6 +1,6 @@
 import React from 'react';
-import Sidebar from '../../components/sidebar/Sidebar';
-import Footer from '../../components/footer/Footer';
+import Sidebar from '../../components/common/sidebar/Sidebar';
+import Footer from '../../components/common/footer/Footer';
 import MenuBody from '../../components/body/menu1/Menu1Body';
 
 const Menu = () => {

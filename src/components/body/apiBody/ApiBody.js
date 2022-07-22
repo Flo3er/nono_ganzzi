@@ -43,7 +43,7 @@ const ApiBody = () => {
 
     useEffect(
         ()=>{
-            axios.get(`https://apis.data.go.kr/B551177/BusInformation/getBusInfo?serviceKey=RWctpfw6RuG2ATd0i8BoywdmvaUncsusXm%2FPAzGmrp22Hthq1JpM9du4g713Q0PF5Wg3JSVJ0filuBc3KNL5Ww%3D%3D&numOfRows=10&pageNo=1&area=1&type=json`)
+            axios.get(`/B551177/BusInformation/getBusInfo?serviceKey=RWctpfw6RuG2ATd0i8BoywdmvaUncsusXm%2FPAzGmrp22Hthq1JpM9du4g713Q0PF5Wg3JSVJ0filuBc3KNL5Ww%3D%3D&numOfRows=10&pageNo=1&area=1&type=json`)
             .then(response => {
                 setBus(response.data.response.body.items);
                 console.log(response.data.response.body.items);

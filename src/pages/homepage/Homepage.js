@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../../components/header/Header';
-import Sidebar from '../../components/sidebar/Sidebar';
-import Footer from '../../components/footer/Footer';
+import Header from '../../components/common/header/Header';
+import Sidebar from '../../components/common/sidebar/Sidebar';
+import Footer from '../../components/common/footer/Footer';
 import HomepageBody from '../../components/body/homepageBody/HomepageBody';
 
 const Home = () => {
