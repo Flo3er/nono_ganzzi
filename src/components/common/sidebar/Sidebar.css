@@ -15,16 +15,20 @@
     height: 100%;
 }
 
+
 /* 로고부분.css */
 .head > h1{
     width:100%;
     margin-top:45px;
 }
-.head > h1 a {display: flex;}
-.head > h1 a img {
-    padding:0 10px 0 20px;
+.head > h1 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.head > h1:hover{color:red;}
+.head > h1 a img {
+    margin-right:10px;
+}
 .head > h1 .title > h2 {font-size:20px; font-weight: 500;}
 .head > h1 .title > h2:after {
     display: block;
@@ -37,6 +41,7 @@
     font-size:30px;
     margin:10% 0;
 }
+
 
 /* useinfo 부분.css */
 .head > .userinfo {
@@ -54,6 +59,7 @@
     padding:5px 14px;
 }
 
+
 /* 네비.css */
 .mainNav{
     width:100%;
@@ -69,38 +75,52 @@
     margin-bottom:5px;
     width:220px;
 }
-.depth1 > li:last-child{margin-bottom:0;}
 .depth1 > li > a > p {padding:10px 0;}
 .depth1 > li:hover > a {
     transition:all 0.1s;
     background-color: #F2F9FF;
-    border-radius: 8px;
 }
 .depth1 > li:hover > a > .emo {color:#1F6DE2;}
+
+/* depth1 클릭 시 작업 (depth2보이기, 배경주기) */
+.depth1 > li:last-child{margin-bottom:0;}
+.depth1 > li.on .liA {background-color: #E2F1FF;}
+.depth1 > li.on .liA .emo {color: #1F6DE2;}
+.depth1 > li.on .depth2 {display: block;}
+
 /* .depth2작업 */
-.depth1 > li:hover .depth2{ display: block;}
-.depth1 > li .depth2 > li:hover > a { text-decoration: underline;}
-.depth2 {
-    display: none;
-    text-align: center;
-    /* border:1px solid black; */
+.depth1 > li .depth2{
+    display: none; 
 }
-.depth2 > li {padding:3px 0;}
 .depth2 > li > a {
-    display:block;
-    padding:2%;
+    padding:8px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: #E2F1FF;
 }
+.depth1 > li .depth2 > li:hover > a{ 
+    background-color: #f2f9ff;
+}
+.depth1 > li .depth2 > li > a .arrow {
+    position:absolute;
+    left:15px;
+    display: none;
+}
+.depth1 > li .depth2 > li:hover > a .arrow{display: inline-block;}
+.depth1 > li .depth2 > li > a p {
+    padding-left:50px;
+}
+
+
 /* 네비메뉴 공통작업 */
 .liA{
     display:flex;
     align-items:center;
     padding:2%;
 }
-.emo{
-    width:20px;
-    height:20px;
-    margin:0 10px;
-}
+.emo{ margin:0 10px; }
+.small{width:17px;}
 
 
 /* 반응형 화면 구현 */

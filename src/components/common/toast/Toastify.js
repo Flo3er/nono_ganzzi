@@ -3,6 +3,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Toastify = () => {
+
   const notify = () => {
     toast.success("This is a test success", {
       position: toast.POSITION.TOP_CENTER,
@@ -10,6 +11,7 @@ const Toastify = () => {
       hideProgressBar: true
     });
   };
+  
   return (
     <div>
       <button onClick={notify}>Toast</button>
@@ -19,4 +21,3 @@ const Toastify = () => {
 };
 
 export default Toastify;
-

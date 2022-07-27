@@ -1,41 +1,101 @@
-// import ReactModal from 'react-modal';
+import React, {useState} from 'react';
+import './Modal.css';
+import {AiOutlineClose} from 'react-icons/ai';
 
-// const MyModal = ({ isOpen }) => {
-//   return (
-//     <ReactModal isOpen={isOpen}>
-//       <div>모달 입니다.</div>
-//     </ReactModal>
-//   );
-// };
+const Modal = (props) => {
+    const {open, close} = props;
 
-// export default MyModal;
+    const [infoValue, setInfoValue] = useState('');
 
-import React from 'react'
-import './Modal.css'
+    const [isActive, setActive] = useState('false');
 
-const Modal = ({modalClose}) => {
+    const onTitleChange = (event) => {
+        const {name, value} = event.target;
+        setInfoValue({
+            ...infoValue,
+            [name]:value
+        })
+    };
 
-  const onCloseModal = (e) => {
-      console.log('e.target: ', e.target)
-      console.log('e.tarcurrentTargetget: ', e.currentTarget)
-      if(e.target === e.currentTarget){
-          modalClose()
-      }
+    const onContentChange = (event) => {
+        const {name, value} = event.target;
+        setInfoValue({
+            ...infoValue,
+            [name]:value
+        })
+    };
 
-  }
-  return (
-      <div className="modal__container" onClick={onCloseModal}>
-          <div className="modal">
-            <p>success</p>
-            <p>success</p>
-            <p>success</p>
-            <p>success</p>
-            <p>success</p>
-            <p>success</p>
-            <button className="modal__button" onClick={modalClose}> Modal Close</button>
-          </div>
-      </div>
-  )
-}
+    console.log(infoValue);
+
+    const toggleClass = () => {
+        setActive(!isActive);
+        console.log('클릭')
+    }
+
+    function boardForm_check(){
+        var title = document.getElementById('title');
+        var content = document.getElementById('content');
+        if(title.value === ''){
+            alert('제목을 입력하세요.');
+            content.focus();
+            return false;
+        };
+        if (content.value === ''){
+            alert('내용을 입력하세요.');
+            content.focus();
+            return false;
+        }
+    }
+
+    return ( 
+    <div className={open ? 'openModal modal' : 'modal'}>
+        {open ? (
+        <section>
+            <form>
+                <header>
+                    <input 
+                        type='text'
+                        placeholder='제목을 입력하세요' 
+                        name="title"
+                        onChange={onTitleChange}
+                        id='title'
+                    >
+                    </input>
+                    <button className="close" onClick={close}>
+                        <AiOutlineClose />
+                    </button>
+                </header>
+                <main>
+                    <textarea 
+                        placeholder='내용을 입력하세요 ' 
+                        className='bR8' 
+                        onChange={onContentChange}
+                        name="content"
+                        id='content'
+                    />
+                </main>
+                <footer>
+                    <div className='checking'>
+                        <button 
+                            type='button'
+                            className={isActive ? 'btn' : 'btn_on'}
+                            onClick={toggleClass}
+                        />
+                        <p className='mL10 fs14'>주요 공지사항</p>
+                    </div>
+                    <button 
+                        className="close bR8 back-blue"
+                        onClick={boardForm_check}
+                        type='submit'
+                    >
+                        저장하기
+                    </button>
+                </footer>
+            </form>
+        </section>
+            ) : null}
+        </div>
+    );
+};
 
 export default Modal;

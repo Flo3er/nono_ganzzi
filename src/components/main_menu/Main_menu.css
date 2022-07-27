@@ -1,0 +1,12 @@
+.menu1{position:relative; height:100vh;}
+.menu1 > h2 {text-align: center; padding-top:5%;}
+.menu1 > .depth2_D {
+    border:1px solid black;
+    width:60%;
+    position:absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+}
+.menu1 > .depth2_D > li:hover {background-color: gray;}
+.menu1 > .depth2_D > li {border:1px solid black;}
+.menu1 > .depth2_D > li > a {display: block; padding:2%;}

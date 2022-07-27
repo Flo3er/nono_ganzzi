@@ -1,20 +1,18 @@
 import React from 'react';
-import Header from '../../components/common/header/Header';
 import Sidebar from '../../components/common/sidebar/Sidebar';
 import Footer from '../../components/common/footer/Footer';
-import HomepageBody from '../../components/home/HomeBody';
+import MainMenuBody from '../../components/main_menu/MainmenuBody';
 
-const Home = () => {
+const Menu = () => {
     return (
         <div>
             <Sidebar />
             <div>
-                <Header />
-                <HomepageBody />
+                <MainMenuBody />
             </div>
             <Footer />
         </div>
     );
 };
 
-export default Home;
+export default Menu;

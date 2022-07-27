@@ -1,16 +1,17 @@
 import React from 'react';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+// import '../src/assets/font/notoSans.css';
 import Homepage from './pages/homepage/Homepage';
-import API from './pages/useApi/UseApi';
-import Menu1 from './pages/menu1/Menu1';
+import BusList from './pages/busList/BusListPage';
+import MainMenu from './pages/main_menu/Main_menu';
 
 const App = () => {
     return (
         <Router>
             <Routes>
                 <Route path="/" element={<Homepage/>}/>
-                <Route path="/api" element={<API/>}/>
-                <Route path="/menu1" element={<Menu1/>}/>
+                <Route path="/busList" element={<BusList />}/>
+                <Route path="/mainMenu" element={<MainMenu/>}/>
             </Routes>
         </Router>
     );

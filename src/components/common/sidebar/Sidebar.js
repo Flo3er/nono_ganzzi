@@ -1,11 +1,28 @@
 import React, {useState} from 'react';
 import './Sidebar.css';
 import {Link} from 'react-router-dom';
+import {IoIosArrowForward} from 'react-icons/io';
 import {CgHome} from 'react-icons/cg';
 import {BiBox, BiFile} from 'react-icons/bi';
 import {AiOutlineSetting} from 'react-icons/ai';
+import logo from '../../../assets/image/logo.png';
+// import home from '../../../assets/image/home.png';
+// import inventory from '../../../assets/image/inventory_2.png';
+// import description from '../../../assets/image/description.png';
+// import settings from '../../../assets/image/settings.png';
 
 const Sidebar = () => {
+
+    const [isOpen, setIsOpen] = useState(false);
+    const [click, setClick] = useState(0);
+
+    const toggleMenu=()=>{
+        setIsOpen(isOpen => !isOpen);
+    }
+
+    const tabClickkHandler = (index) => {
+        setClick(index)
+    }
 
     return(
         <div className='sidebar'>
@@ -13,7 +30,7 @@ const Sidebar = () => {
                 {/* 사이즈 현재 안맞아서 이미지 받고 수정 필요함 */}
                 <h1>
                     <Link to="/">
-                        <img src="./dsd.jpg" alt="로고"></img>
+                        <img src={logo} alt="로고"></img>
                         <div className='title'>
                             <h2>화성시니어클럽</h2>
                             <p className='fs14'>노노유통</p>
@@ -28,56 +45,113 @@ const Sidebar = () => {
                 </div>
                 <div className='mainNav'>
                     <ul className='depth1'>
-                        <li className='depthLi'>
-                            <Link to="/menu1" className='liA'>
+                        <li onClick={()=>tabClickkHandler(0)} className={click===0 ? 'on' : ''}>
+                            {/* <Link to="/mainMenu" className='liA'> */}
+                            <Link to="/" className='liA'>
+                                {/* <img src={home} className='emo' /> */}
                                 <CgHome className='emo' />
                                 <p className='liP'>메인 페이지</p>
                             </Link>
                             <ul className='depth2'>
-                                <li><Link to="/api">연동 페이지</Link></li>
-                                <li><Link to="">상세메뉴2</Link></li>
-                                <li><Link to="">상세메뉴3</Link></li>
-                                <li><Link to="">상세메뉴4</Link></li>
-                                <li><Link to="">상세메뉴5</Link></li>
+                                <li>
+                                    <Link to="/busList">
+                                        <IoIosArrowForward className='arrow'/>
+                                        <p>공지사항 목록</p>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="">
+                                        <IoIosArrowForward className='arrow'/>
+                                        <p>참여자 작업 현황</p>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="">
+                                        <IoIosArrowForward className='arrow'/>
+                                        <p>입&#47;출고 현황</p>
+                                    </Link>
+                                </li>
                             </ul>
                         </li>
-                        <li>
+                        <li onClick={()=>tabClickkHandler(1)} className={click===1 ? 'on' : ''}>
                             <Link to="" className='liA'>
+                                {/* <img src={inventory} className='emo small' /> */}
                                 <BiBox className='emo' />
                                 <p className='liP'>물품 관리</p>
                             </Link>
                             <ul className='depth2'>
-                                <li><Link to="">상세메뉴1</Link></li>
-                                <li><Link to="">상세메뉴2</Link></li>
-                                <li><Link to="">상세메뉴3</Link></li>
-                                <li><Link to="">상세메뉴4</Link></li>
-                                <li><Link to="">상세메뉴5</Link></li>
+                                <li>
+                                    <Link to="">
+                                            <IoIosArrowForward className='arrow'/>
+                                            <p>물품 목록</p>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="">
+                                        <IoIosArrowForward className='arrow'/>
+                                        <p>새 물품 추가</p>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="">
+                                        <IoIosArrowForward className='arrow'/>
+                                        <p>물품 상태 관리</p>
+                                    </Link>
+                                </li>
                             </ul>
                         </li>
-                        <li>
+                        <li onClick={()=>tabClickkHandler(2)} className={click===2 ? 'on' : ''}>
                             <Link to="" className='liA'>
+                                {/* <img src={description} className='emo' /> */}
                                 <BiFile className='emo' />
                                 <p className='liP'>문서 관리</p>
                             </Link>
                             <ul className='depth2'>
-                                <li><Link to="">상세메뉴1</Link></li>
-                                <li><Link to="">상세메뉴2</Link></li>
-                                <li><Link to="">상세메뉴3</Link></li>
-                                <li><Link to="">상세메뉴4</Link></li>
-                                <li><Link to="">상세메뉴5</Link></li>
+                                <li>
+                                    <Link to="/busList">
+                                        <IoIosArrowForward className='arrow'/>
+                                        <p>1</p>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="">
+                                        <IoIosArrowForward className='arrow'/>
+                                        <p>2</p>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="">
+                                        <IoIosArrowForward className='arrow'/>
+                                        <p>3</p>
+                                    </Link>
+                                </li>
                             </ul>
                         </li>
-                        <li>
+                        <li onClick={()=>tabClickkHandler(3)} className={click===3 ? 'on' : ''}>
                             <Link to="" className='liA'>
+                                {/* <img src={settings} className='emo' /> */}
                                 <AiOutlineSetting className='emo' />
                                 <p className='liP'>관리자 설정</p>
                             </Link>
                             <ul className='depth2'>
-                                <li><Link to="">상세메뉴1</Link></li>
-                                <li><Link to="">상세메뉴2</Link></li>
-                                <li><Link to="">상세메뉴3</Link></li>
-                                <li><Link to="">상세메뉴4</Link></li>
-                                <li><Link to="">상세메뉴5</Link></li>
+                                <li>
+                                    <Link to="/busList">
+                                        <IoIosArrowForward className='arrow'/>
+                                        <p>1</p>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="">
+                                        <IoIosArrowForward className='arrow'/>
+                                        <p>2</p>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="">
+                                        <IoIosArrowForward className='arrow'/>
+                                        <p>3</p>
+                                    </Link>
+                                </li>
                             </ul>
                         </li>
                     </ul>
