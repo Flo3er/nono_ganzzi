@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useCallback} from 'react';
 import './Modal.css';
 import {AiOutlineClose} from 'react-icons/ai';
 
