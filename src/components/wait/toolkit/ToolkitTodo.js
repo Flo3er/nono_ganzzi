@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { changeInput, insert, toggle, remove } from '../../../features/sample/todoSlice';
+import { changeInput, insert, toggle, remove } from '../../../features/sample/NoticeSlice';
 
 const TodoItem = React.memo(({ todo, onToggle, onRemove }) => {
   return (

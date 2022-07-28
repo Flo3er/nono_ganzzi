@@ -14,28 +14,29 @@ const HomeListItem = () => {
     const closeModal = () => {
         setModalOpen(false);
     };
+// open과 close에 함수값이 포함되어있기때문에 적용이 되는 것
 
     return (
         <div className='listhome'>
             <div className='mainBot'>
                 <ul className='mainList'>
-                        <li>
-                            <div className='topmenu'>
-                                <h3>공지사항</h3>
-                                <div className='topmenu_icon'>
-                                    <Link to="" className='blue'>
-                                        <AiOutlineUnorderedList/>
-                                    </Link>
-                                    <button onClick={openModal} className="blue">
-                                        <AiOutlinePlus className='mL10'/>
-                                    </button>
-                                    <Modal open={modalOpen} close={closeModal} />
-                                </div>
+                    <li>
+                        <div className='topmenu'>
+                            <h3>공지사항</h3>
+                            <div className='topmenu_icon'>
+                                <Link to="" className='blue'>
+                                    <AiOutlineUnorderedList/>
+                                </Link>
+                                <button onClick={openModal} className="blue">
+                                    <AiOutlinePlus className='mL10'/>
+                                </button>
+                                <Modal open={modalOpen} close={closeModal} />
                             </div>
-                            <div className='infoList bR8 fs14'>
-                                새로운 공지를 입력해보세요!
-                            </div>
-                        </li>
+                        </div>
+                        <div className='infoList bR8 fs14'>
+                            공지사항을 입력해주세요.
+                        </div>
+                    </li>
                         {/* <li>
                             <div className='topmenu'>
                                 <h3>공지사항</h3>

@@ -1,8 +1,7 @@
 import React from 'react';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
-// import '../src/assets/font/notoSans.css';
 import Homepage from './pages/homepage/Homepage';
-import BusList from './pages/busList/BusListPage';
+import BusList from './pages/noticeList/NoticeListPage';
 import MainMenu from './pages/main_menu/Main_menu';
 
 const App = () => {

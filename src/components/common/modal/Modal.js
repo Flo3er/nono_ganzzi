@@ -1,4 +1,4 @@
-import React, {useState, useCallback} from 'react';
+import React, {useState} from 'react';
 import './Modal.css';
 import {AiOutlineClose} from 'react-icons/ai';
 
@@ -24,7 +24,6 @@ const Modal = (props) => {
             [name]:value
         })
     };
-
     console.log(infoValue);
 
     const toggleClass = () => {
@@ -39,13 +38,18 @@ const Modal = (props) => {
             alert('제목을 입력하세요.');
             content.focus();
             return false;
-        };
-        if (content.value === ''){
+        } else if (content.value === ''){
             alert('내용을 입력하세요.');
             content.focus();
             return false;
+        } else {
+            alert(`
+                작성한 내용 뽑아내기
+                제목:${infoValue.title}, 내용:${infoValue.content}
+            `);
         }
     }
+// if값을 다 피해갔을 때 event를 정해야댐
 
     return ( 
     <div className={open ? 'openModal modal' : 'modal'}>
@@ -59,8 +63,7 @@ const Modal = (props) => {
                         name="title"
                         onChange={onTitleChange}
                         id='title'
-                    >
-                    </input>
+                    />
                     <button className="close" onClick={close}>
                         <AiOutlineClose />
                     </button>
