@@ -7,7 +7,7 @@ const Toastify = () => {
     toast.success("This is a test success", {
       position: toast.POSITION.TOP_CENTER,
       autoClose: 2000,
-      hideProgressBar: true
+      hideProgressBar: false
     });
   };
   return (
@@ -19,4 +19,3 @@ const Toastify = () => {
 };
 
 export default Toastify;
-

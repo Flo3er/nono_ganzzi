@@ -2,19 +2,19 @@ import React from 'react';
 
 import Header from '../../components/common/header/Header';
 import Sidebar from '../../components/common/sidebar/Sidebar';
-import SampleBody from '../../components/home/sample/SampleBody';
+import NoticeBody from '../../components/home/notice/NoticBody';
 
-const SamplePage = () => {
+const NoticePage = () => {
     return (
         <div>
              <Sidebar />
             <div className='container'>
                  <Header />
-                <SampleBody />
+                <NoticeBody />
             </div>
         </div>
     )
 }
 
 
-export default SamplePage;
+export default NoticePage;

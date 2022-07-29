@@ -8,9 +8,9 @@ import BusBody from '../../components/home/busList/BusBody';
 const HomePage = () => {
     return (
         <div>
-            <Header />
+            <Sidebar />
             <div className = "container">
-                <Sidebar />
+                <Header />
                 <BusBody />
             </div>
         </div>

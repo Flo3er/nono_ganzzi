@@ -7,9 +7,10 @@ import ToolkitBody from '../../components/home/toolkit/ToolkitBody';
 const ToolkitPage = () => {
     return (
         <div>
-            <Header />
+            <Sidebar />
+           
             <div className = "container">
-                <Sidebar />
+                <Header />
                 <ToolkitBody />
             </div>
         </div>

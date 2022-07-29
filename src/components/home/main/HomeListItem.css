@@ -1,9 +1,10 @@
-.listhome{margin-left:30%;}
+.listhome{margin-left:260px;}
 .mainBot{
     width:100%;
     min-height:70vh;
 }
 .mainList{
+    height: 600px;
     display:flex;
     justify-content:space-between;
     flex-wrap:wrap;
@@ -12,10 +13,22 @@
     padding:5%;
 }
 .mainList > li{
-    width:30%;
-    height:250px;
-    background-color:white;
-    border:3px solid red;
+    
+    width:320px;
+    height:240px;
+    background-color: #F2F9FF;
+    border-radius: 5px;
+    /* border:3px solid red; */
     margin-bottom:5%;
     border-radius:10px;
+   
+}
+.mainList > div{
+    text-align: left;
+    background-color: red;
+}
+.mainList > p{
+    background-color: aqua;
+    width:320px;
+    height:240px;
 }

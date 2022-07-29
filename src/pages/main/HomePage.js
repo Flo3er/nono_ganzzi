@@ -8,9 +8,10 @@ import HomeBody from '../../components/home/main/HomeBody';
 const HomePage = () => {
     return (
         <div>
-            <Header />
+             <Sidebar />
+            
             <div className = "container">
-                <Sidebar />
+                <Header />
                 <HomeBody />
             </div>
         </div>
