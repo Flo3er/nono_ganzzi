@@ -1,53 +1,11 @@
-// import ReactModal from 'react-modal';
-
-// const MyModal = ({ isOpen }) => {
-//   return (
-//     <ReactModal isOpen={isOpen}>
-//       <div>모달 입니다.</div>
-//     </ReactModal>
-//   );
-// };
-
-// export default MyModal;
-
-// import React from 'react'
-// import './Modal.css'
-
-// const Modal = ({modalClose}) => {
-
-//   const onCloseModal = (e) => {
-//       console.log('e.target: ', e.target)
-//       console.log('e.tarcurrentTargetget: ', e.currentTarget)
-//       if(e.target === e.currentTarget){
-//           modalClose()
-//       }
-
-//   }
-//   return (
-//       <div className="modal__container" onClick={onCloseModal}>
-//           <div className="modal">
-//             <p>success</p>
-//             <p>success</p>
-//             <p>success</p>
-//             <p>success</p>
-//             <p>success</p>
-//             <p>success</p>
-//             <button className="modal__button" onClick={modalClose}> Modal Close</button>
-//           </div>
-//       </div>
-//   )
-// }
-
-// export default Modal;
-
-
-
 /// Modal
 
 import React, { useRef } from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import useOutSideClick from './useOutSideClick';
 import ModalContainer from './ModalContainer';
+import { AiOutlineClose } from "react-icons/ai";
+
 
 const Modal = ({ onClose, children }) => {
   const modalRef = useRef(null);
@@ -65,56 +23,54 @@ const Modal = ({ onClose, children }) => {
 
   return (
     <ModalContainer>
-      <Overlay>
-        <ModalWrap ref={modalRef}>
-          <CloseButton onClick={handleClose}>
-            <i className="fa-solid fa-xmark"></i>
-          </CloseButton>
-          <Contents>{children}</Contents>
-        </ModalWrap>
-      </Overlay>
+      <div className="overlay">
+        <div className="modalWrap" ref={modalRef}>
+          {/* <div className="closeIcon" onClick={handleClose}>
+            <AiOutlineClose className="X-Icon"/>
+          </div> */}
+          <div className = "contents">{children}</div>
+        </div>
+      </div>
     </ModalContainer>
   );
 }
 
-const Overlay = styled.div`
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(204, 153, 255, 0.5);
-  z-index: 9999;
-`;
 
-const ModalWrap = styled.div`
-  width: 600px;
-  height: fit-content;
-  border-radius: 15px;
-  background-color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-`;
 
-const CloseButton = styled.div`
-  float: right;
-  width: 40px;
-  height: 40px;
-  margin: 20px;
-  cursor: pointer;
-  i {
-    color: #5d5d5d;
-    font-size: 30px;
-  }
-`;
+// const Overlay = styled.div`
+//   position: fixed;
+//   width: 100%;
+//   height: 100%;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   background: rgba(204, 153, 255, 0.5);
+//   z-index: 9999;
+// `;
 
-const Contents = styled.div`
-  margin: 50px 30px;
-`;
+// const ModalWrap = styled.div`
+//   width: 600px;
+//   height: fit-content;
+//   border-radius: 15px;
+//   background-color: #fff;
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// `;
+
+// const CloseButton = styled.div`
+//   float: right;
+//   width: 20px;
+//   height: 10px;
+//   margin: 20px;
+//   cursor: pointer;
+// `;
+
+// const Contents = styled.div`
+//   margin: 50px 30px;
+// `;
 
 export default Modal;
 

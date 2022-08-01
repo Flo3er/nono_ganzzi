@@ -6,10 +6,12 @@ import './SampleText.css';
 
 
 const SampleText = () => {
+    const toastText = 'sample text';
+
     return (
         <div className='listApi'>
             <p>여기 보여줘어어억</p>
-            <Toastify />
+            <Toastify text={toastText}/>
             <ModalButton />
         </div>
     );

@@ -2,9 +2,9 @@ import React from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Toastify = () => {
+const Toastify = ({ text }) => {
   const notify = () => {
-    toast.success("This is a test success", {
+    toast.success(text, {
       position: toast.POSITION.TOP_CENTER,
       autoClose: 2000,
       hideProgressBar: true
@@ -12,7 +12,7 @@ const Toastify = () => {
   };
   return (
     <div>
-      <button onClick={notify}>Toast</button>
+      <button onClick={notify}>toast</button>
       <ToastContainer />
     </div>
   );

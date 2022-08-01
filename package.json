@@ -48,5 +48,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://apis.data.go.kr"
+  "proxy": "http://3.39.53.3:3000"
 }
