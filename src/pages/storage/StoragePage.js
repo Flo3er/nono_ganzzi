@@ -2,19 +2,19 @@ import React from 'react';
 
 import Header from '../../components/common/header/Header';
 import Sidebar from '../../components/common/sidebar/Sidebar';
-import BusBody from '../../components/home/busList/BusBody';
+import StorageBody from '../../components/main/storage/StorageBody';
 
 
-const HomePage = () => {
+const StoragePage = () => {
     return (
         <div>
             <Header />
             <div className = "container">
                 <Sidebar />
-                <BusBody />
+                <StorageBody />
             </div>
         </div>
     )
 }
 
-export default HomePage;
+export default StoragePage;

@@ -1,6 +1,6 @@
-import Instance from './AxiosInstance';
+import Instance from './NoticeInstance';
 
-// Notice 생성
+// Notice 생성(post)
 const NoticePost = async() => {
     try {
         const response = await Instance.post('/api/v1/notice',{
@@ -14,7 +14,7 @@ const NoticePost = async() => {
     }
 };
 
-// Notice 조회
+// Notice 조회(get)
 const NoticeGet = async() => {
     try {
         const response = await Instance.get('/api/v1/notice');
@@ -24,10 +24,10 @@ const NoticeGet = async() => {
     }
 };
 
-// Notice 수정
+// Notice 수정(put)
 const NoticePut = async() => {
     try {
-        const response = await Instance.put('/api/v1/notice',{
+        const response = await Instance.put('/api/v1/notice/20',{
             title: 'sampleNoice',
             content: '이건 샘플입니다',
             onFocused: false
@@ -38,11 +38,10 @@ const NoticePut = async() => {
     }
 };
 
-// Notice 삭제
+// Notice 삭제(delete)
 const NoticeDelete = async() => {
     try {
-        const response = await Instance.delete('/api/v1/notice', {
-            noticeId: 16
+        const response = await Instance.delete('/api/v1/notice/16', {
         });
         console.log(response.data);
     } catch (error) {
@@ -50,6 +49,7 @@ const NoticeDelete = async() => {
     }
 };
 
+// 여러 함수를 하나의 변수로 통합 후 export
 const NoticeMethod = {
     NoticePost,
     NoticeGet,

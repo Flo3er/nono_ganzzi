@@ -2,7 +2,7 @@ import React from 'react';
 
 import Header from '../../components/common/header/Header';
 import Sidebar from '../../components/common/sidebar/Sidebar';
-import ToolkitBody from '../../components/home/toolkit/ToolkitBody';
+import ToolkitBody from '../../components/main/toolkit/ToolkitBody';
 
 const ToolkitPage = () => {
     return (

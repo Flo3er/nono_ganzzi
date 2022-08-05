@@ -1,11 +1,11 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore } from "@reduxjs/toolkit";
 
-import counter from './sample/counterSlice';
-import todos from './sample/todoSlice';
+import boardSlice from "./BoardSlice";
 
-export default configureStore({
+// configureStore를 통해 store생성
+export const store = configureStore({
+  // reducer 정의
   reducer: {
-    counter,
-    todos
+    board: boardSlice
   }
 });

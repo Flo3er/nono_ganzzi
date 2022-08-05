@@ -2,19 +2,19 @@ import React from 'react';
 
 import Header from '../../components/common/header/Header';
 import Sidebar from '../../components/common/sidebar/Sidebar';
-import HomeBody from '../../components/home/main/HomeBody';
+import NoticeApiBody from '../../components/main/noticeApi/NoticeApiBody';
 
 
-const HomePage = () => {
+const NoticePage = () => {
     return (
         <div>
             <Header />
             <div className = "container">
                 <Sidebar />
-                <HomeBody />
+                <NoticeApiBody />
             </div>
         </div>
     )
 }
 
-export default HomePage;
+export default NoticePage;
