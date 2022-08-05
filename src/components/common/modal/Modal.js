@@ -1,10 +1,8 @@
 import React, { useRef } from 'react';
-// import styled from 'styled-components';
-// import { AiOutlineClose } from "react-icons/ai";
 
 import useOutSideClick from '../../../hooks/useOutSideClick';
 import ModalContainer from './ModalContainer';
-import './Modal.css';
+import './NoticeModal.css';
 
 const Modal = ({ onClose, children }) => {
   const modalRef = useRef(null);
@@ -12,6 +10,7 @@ const Modal = ({ onClose, children }) => {
     onClose ?.();
   };
   
+  // background 클릭 시 모달창을 닫는 기능이지만 현재 작동하지 않는다.(원인을 찾는 중)
   useOutSideClick(modalRef, handleClose);
 
   // useEffect(() => {
@@ -20,6 +19,8 @@ const Modal = ({ onClose, children }) => {
   //   return () => ($body.style.overflow = "auto")
   // } ,[]);
 
+  // Modal에 공통으로 사용될 레이아웃 Container 컴포넌트를 만든다. (Portal)
+  // useRef를 사용해 Modal 컨테이너 요소에 담아주고 Modal 컨테이너 외부를 클릭하면 handleClose 호출 (modalRef)
   return (
     <ModalContainer>
       <div className="overlay">

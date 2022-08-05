@@ -1,0 +1,114 @@
+.mainBot{
+    width:100%;
+    height:calc(100vh - 180px);
+    border:1px solid black;
+}
+.mainList{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    padding:30px;
+}
+.mainList > li{
+    width:320px;
+    height:240px;
+    margin-top:30px;
+}
+.mainList > li:first-child{margin-top:0;}
+.mainList > li > .topmenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:30px;
+}
+.mainList > li > .topmenu h3 {font-size:16px; color:#2E2E2E;}
+.mainList > li > .topmenu > .topmenu_icon button {font-size: 20px; cursor: pointer;}
+.mainList > li > .infoList {
+    border:1px solid #B0BECC;
+    height:210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7A7A7D;
+    background-color: #F2F9FF;
+}
+
+/* header */
+.modal > section form > header {
+    position: relative;
+    padding:30px 0 10px;
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+}
+.modal > section form > header input {
+    border:none;
+    height:50px;
+    flex:1;
+}
+.modal > section form > header button {
+    width: 32px;
+    font-size: 21px;
+    font-weight: 700;
+}
+/* main */
+.modal > section form > main{
+    height:420px;
+    width:540px;
+}
+.modal > section form > main textarea{
+    width:100%;
+    height:100%;
+    border:1px solid #1F6DE2;
+    padding:10px;
+}
+/* footer */
+.modal > section form > footer {
+    width:100%;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    padding:20px 5px;
+}
+.modal > section form > footer .checking{
+    display: flex;
+    align-items: center;
+}
+.modal > section form > footer input {
+    width:24px;
+    height:24px;
+}
+.modal > section form > footer button {
+    padding: 6px 12px;
+    color: #fff;
+    background-color: #1F6DE2;
+    font-size:16px;
+    width:130px;
+    height:40px;
+}
+/* .modal.openModal {
+    display: flex;
+    align-items: center;
+    팝업이 열릴때 스르륵 열리는 효과 
+    animation: modal-bg-show 0.3s;
+} */
+
+@keyframes modal-show {
+    from {
+        opacity: 0;
+        margin-top: -50px;
+    }
+    to {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+@keyframes modal-bg-show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
