@@ -4,14 +4,17 @@ import { Link } from 'react-router-dom';
 import { select } from '../modules/boardSlice';
  
 function BoardList() {
-    const inputData = useSelector(state => state.board.inputData)
-    const lastId = useSelector(state => state.board.lastId)
+    // inputData에는 useSelector를 이용해 조회한 state내에 있는 inputData를 저장한다.
+    const inputData = useSelector(state => state.board.inputData);
+    // lastId useSelector를 이용해 조회한 state내에 있는 lastId 저장한다.
+    const lastId = useSelector(state => state.board.lastId);
     const dispatch = useDispatch();
  
+    // selectContent는 id를 파라미터로 받으며 그 값을 select action에 dispatch한다.
     const selectContent = (id) => {
-        console.log(id)
-        dispatch(select(id))
-    }
+        console.log(id);
+        dispatch(select(id));
+    };
     
     return(
         <div>

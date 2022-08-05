@@ -15,6 +15,7 @@ function BoardNew() {
             title: title,
             content: content
         }
+        
         dispatch(save(inputData))
         setTitle('')
         setContent('')

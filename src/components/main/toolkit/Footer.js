@@ -4,7 +4,7 @@ import ButtonHome from './ButtonHome';
 import ButtonWrite from './ButtonWrite';
  
 function Footer() {
-    const uri = useSelector(state => state.uri.inputData)
+    const uri = useSelector(state => state.uri.inputData);
  
     return(
         <div>
