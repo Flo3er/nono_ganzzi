@@ -6,9 +6,10 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <App />
-  </React.StrictMode>
+  // </React.StrictMode>
+  //  stricMode를 제거하면 console에 두개씩 찍히는걸 방지할 수 있음.
 );
 
 reportWebVitals();

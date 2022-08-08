@@ -6,10 +6,6 @@ import {CgHome} from 'react-icons/cg';
 import {BiBox, BiFile} from 'react-icons/bi';
 import {AiOutlineSetting} from 'react-icons/ai';
 import logo from '../../../assets/image/logo.png';
-// import home from '../../../assets/image/home.png';
-// import inventory from '../../../assets/image/inventory_2.png';
-// import description from '../../../assets/image/description.png';
-// import settings from '../../../assets/image/settings.png';
 
 const Sidebar = () => {
 

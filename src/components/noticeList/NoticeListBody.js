@@ -1,5 +1,5 @@
 import React from 'react';
-import NoticeListItem from './NoticeListItem.js';
+import NoticeListItem from './NoticeItems';
 
 const NoticeListBody = () => {
     return (

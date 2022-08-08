@@ -1,5 +1,4 @@
-.modal {
-    display: none;
+.modal-wrap {
     position: fixed;
     top: 0;
     right: 0;
@@ -7,76 +6,93 @@
     left: 0;
     z-index: 99999;
     background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
 }
-.modal > section {
-    width: 600px;
-    height:600px;
-    margin: 0 auto;
-    border-radius: 0.3rem;
+.modal-wrap.active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity ease 0.25s;
+}
+.modal-wrap .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
     background-color: #fff;
     /* 팝업이 열릴때 스르륵 열리는 효과 */
     animation: modal-show 0.3s;
-    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 0.3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width:600px;
+    height:600px;
+    overflow: hidden;
 }
 /* header */
-.modal > section form > header {
+.modal-wrap > .overlay form > header {
     position: relative;
     padding:30px 0 10px;
     display: flex;
     justify-content: space-between;
     width:100%;
 }
-.modal > section form > header input {
+.modal-wrap > .overlay form > header input {
     border:none;
     height:50px;
     flex:1;
 }
-.modal > section form > header button {
+.modal-wrap > .overlay form > header button {
     width: 32px;
     font-size: 21px;
     font-weight: 700;
     cursor: pointer;
 }
 /* main */
-.modal > section form > main{
+.modal-wrap > .overlay form > main{
     height:420px;
     width:540px;
 }
-.modal > section form > main textarea{
+.modal-wrap > .overlay form > main textarea{
     width:100%;
     height:100%;
     border:1px solid #1F6DE2;
     padding:10px;
 }
 /* footer */
-.modal > section form > footer {
+.modal-wrap > .overlay form > footer {
     width:100%;
     text-align: right;
     display: flex;
     justify-content: space-between;
     padding:20px 5px;
 }
-.modal > section form > footer .checking{
+.modal-wrap > .overlay form > footer .checking{
     display: flex;
     align-items: center;
 }
-.modal > section form > footer .checking .btn {
+.modal-wrap > .overlay form > footer .checking .btn {
     width:24px;
     height:24px;
     cursor: pointer;
     border-radius: 8px;
 }
-.modal > section form > footer .checking .btn_on {
+.modal-wrap > .overlay form > footer .checking .btn_on {
     width:24px;
     height:24px;
     cursor: pointer;
     border-radius: 8px;
     background-color: #1F6DE2;
 }
-.modal > section form > footer .close {
+.modal-wrap > .overlay form > footer .close {
     padding: 6px 12px;
     color: #fff;
     width:130px;
@@ -84,10 +100,9 @@
     font-size:16px;
     cursor: pointer;
 }
-.modal.openModal {
+.modal-wrap-wrap.openModal {
     display: flex;
     align-items: center;
-    /* 팝업이 열릴때 스르륵 열리는 효과 */
     animation: modal-bg-show 0.3s;
 }
 
@@ -108,4 +123,4 @@
     to {
         opacity: 1;
     }
-  }
+}
