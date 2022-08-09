@@ -1,3 +1,7 @@
+// import React from 'react';
+// import './Sidebar.css';
+// import { Link } from 'react-router-dom';
+// import {AiFillAliwangwang} from 'react-icons/ai';
 import React, {useState} from 'react';
 import './Sidebar.css';
 import {Link} from 'react-router-dom';
@@ -23,7 +27,6 @@ const Sidebar = () => {
     return(
         <div className='sidebar'>
             <div className='head'>
-                {/* 사이즈 현재 안맞아서 이미지 받고 수정 필요함 */}
                 <h1>
                     <Link to="/">
                         <img src={logo} alt="로고"></img>
@@ -35,22 +38,20 @@ const Sidebar = () => {
                 </h1>
                 <div className='userinfo'>
                     <h3>OOO님(작업)</h3>
-                    <Link to="" className='bR8'>
+                    <Link to="" className='bR8 primary'>
                         마이페이지
                     </Link>
                 </div>
                 <div className='mainNav'>
                     <ul className='depth1'>
                         <li onClick={()=>tabClickkHandler(0)} className={click===0 ? 'on' : ''}>
-                            {/* <Link to="/mainMenu" className='liA'> */}
                             <Link to="/" className='liA'>
-                                {/* <img src={home} className='emo' /> */}
                                 <CgHome className='emo' />
                                 <p className='liP'>메인 페이지</p>
                             </Link>
                             <ul className='depth2'>
                                 <li>
-                                    <Link to="/busList">
+                                    <Link to="/noticeList">
                                         <IoIosArrowForward className='arrow'/>
                                         <p>공지사항 목록</p>
                                     </Link>
@@ -71,7 +72,6 @@ const Sidebar = () => {
                         </li>
                         <li onClick={()=>tabClickkHandler(1)} className={click===1 ? 'on' : ''}>
                             <Link to="" className='liA'>
-                                {/* <img src={inventory} className='emo small' /> */}
                                 <BiBox className='emo' />
                                 <p className='liP'>물품 관리</p>
                             </Link>
@@ -98,7 +98,6 @@ const Sidebar = () => {
                         </li>
                         <li onClick={()=>tabClickkHandler(2)} className={click===2 ? 'on' : ''}>
                             <Link to="" className='liA'>
-                                {/* <img src={description} className='emo' /> */}
                                 <BiFile className='emo' />
                                 <p className='liP'>문서 관리</p>
                             </Link>
@@ -125,7 +124,6 @@ const Sidebar = () => {
                         </li>
                         <li onClick={()=>tabClickkHandler(3)} className={click===3 ? 'on' : ''}>
                             <Link to="" className='liA'>
-                                {/* <img src={settings} className='emo' /> */}
                                 <AiOutlineSetting className='emo' />
                                 <p className='liP'>관리자 설정</p>
                             </Link>

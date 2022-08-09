@@ -2,18 +2,19 @@ import React from 'react';
 
 import Header from '../../components/common/header/Header';
 import Sidebar from '../../components/common/sidebar/Sidebar';
-import ToolkitBody from '../../components/main/toolkit/ToolkitBody';
+import StorageBody from '../../components/main/storage/StorageBody';
 
-const ToolkitPage = () => {
+
+const StoragePage = () => {
     return (
         <div>
             <Header />
             <div className = "container">
                 <Sidebar />
-                <ToolkitBody />
+                <StorageBody />
             </div>
         </div>
     )
 }
 
-export default ToolkitPage;
+export default StoragePage;

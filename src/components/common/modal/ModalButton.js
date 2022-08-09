@@ -1,41 +1,27 @@
-// import React, { useState } from 'react';
-// import Modal from './Modal';
-
-// const ModalButton = () => {
-//     const [isOpen, setOpen] = useState(false);
-//     const handleClick = () => {
-//         setOpen(true);
-//     };
-
-//   return (
-//     <div className="App">
-//       <button onClick={handleClick}>모달 열기</button>
-//       <Modal isOpen={isOpen}
-//       onRequestClose={onModalClose} />
-//     </div>
-//   );
-// };
-
-// export default ModalButton;
-
-import React, { useState } from 'react'
-import Modal from './Modal'
-
+import React from 'react';
+import { useState } from 'react';
+import './Modal.css';
+import NoticeModal from './NoticeModal';
 
 const ModalButton = () => {
-    const [modalOpen, setModalOpen] = useState(false)
-    const modalClose = () => {
-        setModalOpen(!modalOpen)
+    const [isOpen, setIsOpen] = useState(false);
 
-    }
+    const onClickButton = () => {
+        setIsOpen(true);
+    };
 
     return (
-        <>
-        <button onClick={modalClose}>Modal</button>
-        { modalOpen && <Modal modalClose={modalClose}></Modal>}
-        </>
-
-    )
-}
+        <div className='buttonWrap'>
+            <button type='button' className='blue btnadd' onClick={onClickButton}>
+                {isOpen && ( 
+                    <NoticeModal
+                        onClose={() => {
+                            setIsOpen(false);
+                    }}
+                />)}
+            </button>
+        </div>
+    );
+};
 
 export default ModalButton;

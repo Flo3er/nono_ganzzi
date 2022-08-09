@@ -7,12 +7,34 @@ input:focus{outline: none;}
 /* 공통 클래스 작업 */
 .mL10 {margin-left:10px;}
 .bR8{border-radius: 8px;}
-.blue {color:#1F6DE2;}
-.back-blue {background-color:#1F6DE2;}
-.row{margin-left:260px;}
-.fs14{font-size: 14px;}
 
-.btn {border:5px solid #1F6DE2;}
+.texthint{color:#7A7A7D};
+.primary {color:#1F6DE2;}
+.primaryDark{color:#0043AF;}
+.secondary{color:#E2F1FF;}
+.back-primary {background-color:#1F6DE2;}
+.back-secondary{background-color: #E2F1FF;}
+
+.row{margin-left:260px;}
+
+.fs14{font-size: 14px;}
+.fs10{font-size: 10px;}
+
+
+.btn-primary {border:5px solid #1F6DE2;}
+.btnadd {
+    background-image: url('./assets/image/add.png');
+    background-size: cover;
+    width:13.5px;
+    height:13.5px;
+}
+.btnList{
+    background-image: url('./assets/image/list.png');
+    background-size: cover;
+    width: 17.5px;
+    height:9.65px;
+    margin-right:10px;
+}
 
 /* @media screen and (max-width:950px){
     .row{margin-left:200px;}

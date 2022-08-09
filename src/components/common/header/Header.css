@@ -1,4 +1,7 @@
-.main{background-color: rgba(150, 150, 150, 0.8);}
+.main{
+    border-bottom: 1px solid black;
+    /* border-bottom: 완성 후 제거할 것 */
+}
 .mainTop{
     height:180px;
     padding:45px 30px;

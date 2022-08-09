@@ -1,8 +1,8 @@
 import React from 'react';
+
 import './Header.css';
 
-
-const HomeSection = () => {
+const Header = () => {
     return (
         <div className='header row'>
             <div className='main'>
@@ -15,4 +15,4 @@ const HomeSection = () => {
     );
 };
 
-export default HomeSection;
+export default Header;
